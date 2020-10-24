@@ -1,0 +1,19 @@
+<mat-toolbar color="primary" class="flex">
+  <div class="flex row max-width">
+    <div>
+      <a mat-flat-button color="primary" routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
+      <a mat-flat-button color="primary" [matMenuTriggerFor]="gamesMenu">Games</a>
+      <mat-menu #gamesMenu>
+        <a mat-menu-item routerLink="/snake" routerLinkActive="active">Snake</a>
+      </mat-menu>
+    </div>
+    <div>
+      <a mat-icon-button [href]="linkedInUrl" matTooltip="LinkedIn">
+        <mat-icon fontSet="fab" fontIcon="fa-linkedin-in"></mat-icon>
+      </a>
+      <a mat-icon-button [href]="gitHubUrl" matTooltip="GitHub">
+        <mat-icon fontSet="fab" fontIcon="fa-github"></mat-icon>
+      </a>
+    </div>
+  </div>
+</mat-toolbar>
